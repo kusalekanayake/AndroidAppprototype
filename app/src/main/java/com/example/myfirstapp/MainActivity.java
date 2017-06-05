@@ -18,11 +18,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** Called when the user taps the Send button */
-    public void sendMessage(View view) {
+    public void sendMessage1(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra(EXTRA_MESSAGE, "You're playing!");
+        startActivity(intent);
+    }
+    /** Called when the user taps the Send button */
+    public void sendMessage2(View view) {
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, "You don't want to play?");
         startActivity(intent);
     }
 }
